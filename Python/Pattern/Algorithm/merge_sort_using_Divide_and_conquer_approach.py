@@ -4,8 +4,8 @@ def merge(arr):
     mid=len(arr)//2
     left=merge(arr[:mid])
     right=merge(arr[mid:])
-    merge_sort(left)
-    merge_sort(right)
+    merge(left)
+    merge(right)
     return merge_sort(left,right)
 
 def merge_sort(left, right):
@@ -21,3 +21,6 @@ def merge_sort(left, right):
     result.extend(left[i:])
     result.extend(right[j:])
     return result
+
+arr=[1,2,9,6,23]
+print(merge(arr))
