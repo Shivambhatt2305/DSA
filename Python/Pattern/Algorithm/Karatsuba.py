@@ -3,7 +3,7 @@ def karatsuba(x,y):
         return x * y
     
     n = max(len(str(x)), len(str(y)))
-    if n%2!=-0:
+    if n%2!=0:
         n -= 1
     
     a,b=divmod(x,10**(n//2))
@@ -17,4 +17,5 @@ def karatsuba(x,y):
 
 x = int(input("Enter number 1: "))
 y = int(input("Enter number 2: "))
+
 print(karatsuba(x,y))
